@@ -1,0 +1,33 @@
+summary: List flights
+operationId: listFlights
+parameters:
+  - name: limit
+    in: query
+    required: false
+    schema:
+      type: integer
+  - name: offset
+    in: query
+    required: false
+    schema:
+      type: integer
+responses:
+  '200':
+    description: OK
+    content:
+      application/json:
+        schema:
+          type: object
+          required: 
+            - total
+            - flights
+          properties:
+            total:
+              type: integer
+              example: 8
+            flights:
+              type: array
+              items:
+                $ref: "../../../components/schemas/Flight.yml"
+  default:
+    $ref: "../../../components/responses/ErrorMessage.yml"

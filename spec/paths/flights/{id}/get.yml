@@ -1,0 +1,17 @@
+summary: Get a flight by ID
+operationId: getFlight
+parameters:
+  - name: id
+    in: path
+    required: false
+    schema:
+      type: string
+responses:
+  '200':
+    description: OK
+    content:
+      application/json:
+        schema:
+          $ref: "../../../components/schemas/Flight.yml"
+  default:
+    $ref: "../../../components/responses/ErrorMessage.yml"

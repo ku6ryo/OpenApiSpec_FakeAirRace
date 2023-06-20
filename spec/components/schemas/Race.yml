@@ -1,0 +1,25 @@
+type: object
+required:
+  - id
+  - name
+  - hostCity
+  - heldOn
+  - participants
+properties:
+  id:
+    type: string
+  name:
+    type: string
+    example: "World Cup 2023"
+  hostCity:
+    type: string
+    example: "Paris"
+  heldOn:
+    type: string
+    format: date-time
+    example: "2023-01-01T00:00:00Z"
+  participants:
+    type: array
+    description: List of team IDs
+    items:
+      $ref: "./Team.yml"

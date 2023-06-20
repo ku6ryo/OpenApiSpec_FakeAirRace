@@ -1,0 +1,33 @@
+summary: List teams
+operationId: listTeams
+parameters:
+  - name: limit
+    in: query
+    required: false
+    schema:
+      type: integer
+  - name: offset
+    in: query
+    required: false
+    schema:
+      type: integer
+responses:
+  '200':
+    description: OK
+    content:
+      application/json:
+        schema:
+          type: object
+          required: 
+            - total
+            - teams
+          properties:
+            total:
+              type: integer
+              example: 8
+            teams:
+              type: array
+              items:
+                $ref: "../../../components/schemas/Team.yml"
+  default:
+    $ref: "../../../components/responses/ErrorMessage.yml"

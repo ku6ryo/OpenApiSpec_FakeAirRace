@@ -1,0 +1,17 @@
+summary: Gets a team by ID
+operationId: getTeam
+parameters:
+  - name: id
+    in: path
+    required: true
+    schema:
+      type: string
+responses:
+  '200':
+    description: OK
+    content:
+      application/json:
+        schema:
+          $ref: "../../../components/schemas/Team.yml"
+  default:
+    $ref: "../../../components/responses/ErrorMessage.yml"

@@ -1,0 +1,28 @@
+summary: List flights by race ID
+operationId: listFlightsByRaceId
+parameters:
+  - name: id
+    in: path
+    required: false
+    schema:
+      type: string
+responses:
+  '200':
+    description: OK
+    content:
+      application/json:
+        schema:
+          type: object
+          required: 
+            - total
+            - flights
+          properties:
+            total:
+              type: integer
+              example: 8
+            flihgts:
+              type: array
+              items:
+                $ref: "../../../../components/schemas/Flight.yml"
+  default:
+    $ref: "../../../../components/responses/ErrorMessage.yml"

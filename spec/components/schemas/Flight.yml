@@ -1,0 +1,23 @@
+type: object
+required:
+  - id
+  - raceId
+  - teamId
+  - time
+  - flewAt
+properties:
+  id:
+    type: string
+  raceId: 
+    type: string
+  teamId:
+    type: string
+  time:
+    type: number
+    description: Time in seconds
+    format: float
+    example: 69.234
+  flewAt:
+    type: string
+    format: date-time
+    example: "2020-01-01T00:00:00Z"

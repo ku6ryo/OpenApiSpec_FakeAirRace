@@ -1,0 +1,14 @@
+type: object
+required:
+  - id
+  - name
+  - countryCode
+properties:
+  id:
+    type: string
+  name:
+    type: string
+    example: "Los Angels Hawks"
+  countryCode:
+    type: string
+    example: "US"

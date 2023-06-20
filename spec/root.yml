@@ -1,0 +1,28 @@
+openapi: '3.1.0'
+info:
+  title: 'Sample Airplane race API'
+  version: '1.0.0'
+servers:
+  - url: 'http://api.airplanerace.com/'
+paths:
+  /teams:
+    get:
+      $ref: 'paths/teams/_/get.yml'
+  /teams/{id}:
+    get:
+      $ref: 'paths/teams/{id}/get.yml'
+  /races:
+    get:
+      $ref: 'paths/races/_/get.yml'
+  /races/{id}:
+    get:
+      $ref: 'paths/races/{id}/get.yml'
+  /races/{id}/flights:
+    get:
+      $ref: 'paths/races/{id}/flights/get.yml'
+  /flights:
+    get:
+      $ref: 'paths/flights/_/get.yml'
+  /flights/{id}:
+    get:
+      $ref: 'paths/flights/{id}/get.yml'

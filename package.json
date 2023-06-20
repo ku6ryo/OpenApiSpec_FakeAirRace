@@ -1,0 +1,13 @@
+{
+  "name": "openapispec-doc-test",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "preview": "redocly preview-docs spec/root.yml",
+    "build": "redocly build-docs spec/root.yml -o html/index.html",
+    "lint": "redocly lint spec/root.yml"
+  },
+  "dependencies": {
+    "@redocly/cli": "^1.0.0-beta.128"
+  }
+}
