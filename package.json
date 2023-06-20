@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "preview": "redocly preview-docs spec/root.yml",
-    "build": "redocly build-docs spec/root.yml -o html/index.html",
+    "build": "redocly build-docs spec/root.yml -o docs/index.html",
     "lint": "redocly lint spec/root.yml"
   },
   "dependencies": {
